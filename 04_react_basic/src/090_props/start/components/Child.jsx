@@ -18,5 +18,4 @@ const Child = (props) => {
   //   </div>
   // );
 };
-
 export default Child;
