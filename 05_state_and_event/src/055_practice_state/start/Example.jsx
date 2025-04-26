@@ -2,8 +2,8 @@ import { useState } from "react";
 
 const Example = () => {
   let [counter, setCounter] = useState(0);
-  let countUp = () => setCounter(counter + 1);
-  let countDown = () => setCounter(counter - 1);
+  let countUp = () => setCounter((counter) => counter + 1);
+  let countDown = () => setCounter((counter) => counter - 1);
   return (
     <>
       <h3>練習問題</h3>
