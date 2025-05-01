@@ -1,4 +1,3 @@
-
 const animals = ["Dog", "Cat", "Rat"];
 
 const Example = () => {
@@ -19,9 +18,10 @@ const Example = () => {
         <li>{animals[2]}</li> */}
         {/* {animalList}
         {helloAnimals} */}
-        {/* {animalList} */}
-
-        {animals.map((animal) => <li>Hello, {animal}</li>)}
+        {animalList}
+        {animals.map((animal) => (
+          <li key={animal}>Hello, {animal}</li>
+        ))}
       </ul>
     </>
   );
