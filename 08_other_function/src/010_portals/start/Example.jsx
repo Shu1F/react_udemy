@@ -24,7 +24,10 @@ const Example = () => {
   const [modalOpen, setModalOpen] = useState(false);
   return (
     <div onClick={() => console.log("空のdiv")}>
-      <div className="container start"></div>
+      <div
+        className="container start"
+        onClick={() => console.log("container")}
+      ></div>
       <button
         type="button"
         onClick={() => setModalOpen(true)}
