@@ -1,7 +1,12 @@
-import { useState } from 'react';
+import { useEffect } from "react";
+import { useState } from "react";
 
 const Example = () => {
   const [checked, setChecked] = useState(false);
+
+  useEffect(() => {
+    if (checked) window.alert("checked!!");
+  }, [checked]);
 
   return (
     <>
@@ -10,7 +15,11 @@ const Example = () => {
         記述を変更し、完成コードのように、checkedがtrueの場合のみalertで「checked!」と表示されるようにしてください。useEffectを用いて実装してください。
       </p>
       <label>
-        <input type={'checkbox'} value={checked} onClick={() => setChecked((checked) => !checked)} />
+        <input
+          type={"checkbox"}
+          value={checked}
+          onClick={() => setChecked((checked) => !checked)}
+        />
         click me
       </label>
     </>
