@@ -4,8 +4,8 @@ import "./lib";
 import { ENDPOINT } from "@/constants";
 
 export default async function SSR() {
-  const articles = await fetch(ENDPOINT, { cache: "-store" }).then((res) =>
-    res.json()
+  const articles = await fetch(ENDPOINT, { next: { revalidate: 10 } }).then(
+    (res) => res.json()
   );
   return (
     <>
