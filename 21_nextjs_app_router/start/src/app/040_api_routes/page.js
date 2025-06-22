@@ -1,6 +1,6 @@
 "use client";
 // POINT API Routesの使い方
-import ArticleList from "../../components/articleList";
+import ArticleList from "../../../../end/src/components/articleList";
 import ArticleForm from "./components/form";
 import { useEffect, useState } from "react";
 
